@@ -19,7 +19,7 @@ def results():
 if results not in st.session_state:
 #Title
     st.title("I am Grader! Your Subject Grade Calculator🧮")
-    st.subheader("I will Calculate your Needed Grade to Pass the Subject and TO BE PART OF THE DEAN'S LIST Based on your Preliminary Performance")
+    st.subheader("I will Calculate your Needed Grades to Pass the Subject and Grades to be Part of the Dean's lister Based on your Preliminary Performance")
     st.caption("Needed Inputs for Computation:")
 #Input Field
     col1, col2, col3, col4, col5 = st.columns(5)
