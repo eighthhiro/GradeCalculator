@@ -4,6 +4,13 @@ import streamlit as st
 def results():
         if absences >= 4:
             st.title("You just failed your subject grade due to your excessive absences!😠")
+        elif required_dean > 100:
+            st.metric(label="Your Computed Prelim Grade", value=f"{prelim_grade:,.2f}")
+            st.subheader("To Pass the Subject with 75 Overall Grade")
+            col1, col2 = st.columns(2)
+            col1.metric(label="Your Needed Midterm Grade", value=f"{required_passing:,.2f}")
+            col2.metric(label="Your Needed Final Grade", value=f"{required_passing:,.2f}")
+            st.subheader(f"Due to your Preliminary Grade of {prelim_grade:,.2f}, it's Impossible to Achieve Dean's List!")
         else:
             st.metric(label="Your Computed Prelim Grade", value=f"{prelim_grade:,.2f}")
             st.subheader("To Pass the Subject with 75 Overall Grade")
